@@ -1,3 +1,5 @@
+import random
+
 import networkx as nx
 import torch
 import numpy as np
@@ -51,6 +53,7 @@ def one_hot_code(G, feats):
 
 
 def generate_and_save_ba_network(file_path, n, m):
+    random.seed()
     ba_network = nx.barabasi_albert_graph(n, m)
     nx.write_gml(ba_network, file_path)
     print(f"BA网络已保存为 {file_path} 文件")
