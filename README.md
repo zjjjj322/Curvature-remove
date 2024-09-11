@@ -1,1 +1,1 @@
-# NERicci
+# Ricci
